@@ -1,3 +1,3 @@
-<h1>It's a blog all about VR!<h1>
-<h2>Check out the website here</h2>
-<https://undercoversteve.github.io/WEB-111-Midterm-Project/>
+<h1>WEB-111-Midterm-Project<h1>
+Check out the website [here](https://undercoversteve.github.io/WEB-111-Midterm-Project/)!
+
