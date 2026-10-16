@@ -1,0 +1,233 @@
+/* === GLOBAL STYLES === */
+html {
+    background-image: url("../media/background/whitetile.png");
+    background-repeat: repeat;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+a {
+    color: rgb(30, 120, 12);
+}
+
+a:hover {
+    color: rgb(12, 65, 16);
+}
+
+a:active {
+    color: rgb(12, 65, 16);
+}
+
+
+/* Header */
+.main-header {
+    background-color: rgb(69, 95, 82);
+    color: White;
+    padding: 15px;
+
+    text-align: left;
+    border: 2px solid black;
+
+    width: 75vw;
+
+    h2 {
+        display: inline;
+        margin-right: 20px;
+    }
+
+    a {
+        font-size: 1.5em;
+        margin-right: 10px;
+        color: rgb(101, 209, 39);
+    }
+
+    nav {
+        display: inline;
+    }
+
+    a:hover {
+        color: rgb(150, 235, 100);
+    }
+
+    a:active {
+        color: rgb(150, 235, 100);
+    }
+
+}
+
+/* Footer */
+.main-footer {
+    background-color: rgb(69, 95, 82);
+    color: white;
+    padding: 15px;
+
+    text-align: left;
+    border: 2px solid black;
+
+    width: 75vw;
+
+    h2 {
+        display: inline;
+        margin-right: 20px;
+    }
+
+    a {
+        color: rgb(101, 209, 39);
+    }
+
+    a:hover {
+        color: rgb(150, 235, 100);
+    }
+
+    a:active {
+        color: rgb(150, 235, 100);
+    }
+
+}
+
+.content-container {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    gap: 20px;
+    padding: 20px;
+    width: 75vw;
+}
+
+.main-content {
+    flex: 3;
+    background-color: #f4f4f4f4;
+    padding: 20px;
+    border: 2px solid black;
+
+    img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+    }
+}
+
+.sidebar {
+    flex: 0.6;
+    padding: 20px;
+    background-color: #f4f4f4f4;
+
+    border: 2px solid black;
+    text-align: center;
+}
+
+/* Container for headset review icon and text */
+.sidebar-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background-color: rgb(69, 95, 82);
+    margin-bottom: 10px;
+
+    border: 3px solid rgb(69, 95, 82);
+
+    img {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        background-color: #f4f4f4f4;
+        flex: 4;
+    }
+}
+
+.icon-link {
+    text-align: center;
+    font-size: 1.5rem;
+    color: rgb(101, 209, 39);
+}
+
+.icon-link:hover {
+    color: rgb(150, 235, 100);
+}
+
+.icon-link:active {
+    color: rgb(150, 235, 100);
+}
+
+/* === REVIEW PAGE STYLES === */
+
+/* Contains headset review links running horizontally */
+.review-pane {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    padding: 20px;
+    background-color: #f4f4f4f4;
+
+    gap: 20px;
+    justify-content: center;
+
+    flex-wrap: wrap;
+}
+
+.review-icon {
+    width: 250px;
+}
+
+/* === TIMELINE PAGE STYLES === */
+
+#link-container {
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* === FLEXIBLE STYLES === */
+
+.small-img {
+    /* It also wraps text! */
+    max-width: 300px;
+    max-height: 300px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    width: auto;
+    height: auto;
+
+    float: right;
+
+}
+
+.reflect-img {
+    transform: scaleX(-1);
+}
+
+/* === FLEXIBLE STYLES BASED ON SCREEN WIDTH === */
+
+@media screen and (max-width: 1250px) {
+    .main-content h1, .main-content h2 {
+        clear: both;
+    }
+
+    .small-img {
+        float: none;
+        margin: 20px auto;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    /* Order by columns for phones */
+    .content-container {
+        flex-direction: column;
+    }
+
+    /* Display the container of links first */
+    #link-container {
+        order: -1;
+    }
+
+}
